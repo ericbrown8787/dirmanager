@@ -1,0 +1,11 @@
+Usage : index [options]
+
+An example CLI for managing a directory
+
+Options:
+
+-V, --version       output the version number
+-l, --ls [value]    List the directory contents
+-m, --mkdir <value> Create a directory
+-t, --touch <value> Create a file
+-h, --help          Display help for command
