@@ -22,7 +22,14 @@ program
     .option('-t, --touch <value>', 'Create a file')
     .parse(process.argv);
 const options = program.opts();
-console.log(figlet.textSync('Dir Manager'));
+// Set custom Figlet font
+console.log(figlet.textSync('Dir Manager', {
+    font: 'Lil Devil',
+    horizontalLayout: 'fitted',
+    verticalLayout: 'default',
+    width: 80,
+    whitespaceBreak: true,
+}));
 function listDirContents(filepath) {
     return __awaiter(this, void 0, void 0, function* () {
         try {

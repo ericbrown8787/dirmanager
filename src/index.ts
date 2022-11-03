@@ -17,7 +17,16 @@ program
 
 const options = program.opts();
 
-console.log(figlet.textSync('Dir Manager'));
+// Set custom Figlet font
+console.log(
+  figlet.textSync('Dir Manager', {
+    font: 'Lil Devil',
+    horizontalLayout: 'fitted',
+    verticalLayout: 'default',
+    width: 80,
+    whitespaceBreak: true,
+  })
+);
 
 async function listDirContents(filepath: string) {
   try {
