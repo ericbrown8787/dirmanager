@@ -36,7 +36,12 @@ async function listDirContents(filepath: string) {
       };
     });
 
-    const detailedFiles = await Promise.all(detailedFilesPromises);
+    const detailedFiles = (await Promise.all(detailedFilesPromises)).sort(
+      // Display files in alphabetical order
+      (thisOne: any, nextOne: any) => {
+        return thisOne.filename.localeCompare(nextOne.filename);
+      }
+    );
     console.table(detailedFiles);
   } catch (error) {
     console.error('Error occurred while reading the directory!', error);

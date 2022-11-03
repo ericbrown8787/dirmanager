@@ -39,7 +39,11 @@ function listDirContents(filepath) {
                     type: type,
                 };
             }));
-            const detailedFiles = yield Promise.all(detailedFilesPromises);
+            const detailedFiles = (yield Promise.all(detailedFilesPromises)).sort(
+            // Display files in alphabetical order
+            (thisOne, nextOne) => {
+                return thisOne.filename.localeCompare(nextOne.filename);
+            });
             console.table(detailedFiles);
         }
         catch (error) {
