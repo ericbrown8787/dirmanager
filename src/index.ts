@@ -25,8 +25,17 @@ async function listDirContents(filepath: string) {
     const detailedFilesPromises = files.map(async (file: string) => {
       let fileDetails = await fs.promises.lstat(path.resolve(filepath, file));
       const { size, birthtime } = fileDetails;
-      return { filename: file, 'size(KB)': size, created_at: birthtime };
+
+      // Display file type
+      const type = fileDetails.isDirectory() === true ? 'directory' : 'file';
+      return {
+        filename: file,
+        'size(KB)': size,
+        created_at: birthtime,
+        type: type,
+      };
     });
+
     const detailedFiles = await Promise.all(detailedFilesPromises);
     console.table(detailedFiles);
   } catch (error) {
