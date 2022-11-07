@@ -1,8 +1,8 @@
 {
-  "name": "dirmanager-ericbrown8787",
+  "name": "dirmanager",
   "version": "1.0.0",
   "description": "**NOTE:** The .gitignore file has been modified so that the dist folder is pushed.",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "bin": {
     "dirmanager": "./dist/index.js"
   },
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RVCC-IDMX/dirmanager-ericbrown8787.git"
+    "url": "git+https://github.com/ericbrown8787/dirmanager"
   },
   "keywords": [],
   "author": "Eric Brown <eric.brown8787@gmail.com> (https://github.com/ericbrown8787)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RVCC-IDMX/dirmanager-ericbrown8787/issues"
+    "url": "https://github.com/ericbrown8787/dirmanager/issues"
   },
-  "homepage": "https://github.com/RVCC-IDMX/dirmanager-ericbrown8787#readme",
+  "homepage": "https://github.com/ericbrown8787/dirmanager#readme",
   "dependencies": {
     "commander": "^9.4.1",
     "figlet": "^1.5.2"
